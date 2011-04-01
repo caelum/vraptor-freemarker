@@ -37,7 +37,7 @@ Vraptor-freemarker.jar can be downloaded from maven's repository, or configured 
 
 # usage for rendering emails
 
-String body = freemarker.use("send_mail_notification").with("currentUser", user).getContent();
+		String body = freemarker.use("send_mail_notification").with("currentUser", user).getContent();
 
 # help
 
