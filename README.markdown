@@ -4,7 +4,7 @@ A simple freemarker engine for rendering templates from within jar files, or ren
 
 # installing
 
-Vraptor-freemarker.jar can be downloaded from mavens repository, or configured in any compatible tool:
+Vraptor-freemarker.jar can be downloaded from maven's repository, or configured in any compatible tool:
 
 		<dependency>
 			<groupId>br.com.caelum.vraptor</groupId>
