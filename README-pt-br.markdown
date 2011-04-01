@@ -16,28 +16,28 @@ Uma biblioteca simples para renderizar templates freemarker de dentro de arquivo
 
 # Renderizando páginas
 
-@Resource
-public class DashboardController {
-
-	private final Usuario usuario;
-	private final Freemarker freemarker;
-
-	public DashboardController(Usuario usuario, Freemarker freemarker) {
-		this.usuario = usuario;
-		this.freemarker = freemarker;
-	}
-	
-	@Path("/admin/dashboard")
-	@Get
-	public void lista() throws IOException, TemplateException {
-		freemarker.use("dashboard").with("usuarioLogado", usuario).render();
-	}
-	
-}
+		@Resource
+		public class DashboardController {
+		
+			private final Usuario usuario;
+			private final Freemarker freemarker;
+		
+			public DashboardController(Usuario usuario, Freemarker freemarker) {
+				this.usuario = usuario;
+				this.freemarker = freemarker;
+			}
+			
+			@Path("/admin/dashboard")
+			@Get
+			public void lista() throws IOException, TemplateException {
+				freemarker.use("dashboard").with("usuarioLogado", usuario).render();
+			}
+			
+		}
 
 # Renderizando emails
 
-String body = freemarker.use("notificacao_email_enviado").with("usuarioLogado", usuario).getContent();
+		String body = freemarker.use("notificacao_email_enviado").with("usuarioLogado", usuario).getContent();
 
 # Ajuda
 
