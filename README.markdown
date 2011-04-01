@@ -16,24 +16,24 @@ Vraptor-freemarker.jar can be downloaded from maven's repository, or configured 
 
 # usage for rendering pages
 
-@Resource
-public class DashboardController {
-
-	private final User user;
-	private final Freemarker freemarker;
-
-	public DashboardController(User user, Freemarker freemarker) {
-		this.user = user;
-		this.freemarker = freemarker;
-	}
-	
-	@Path("/admin/dashboard")
-	@Get
-	public void list() throws IOException, TemplateException {
-		freemarker.use("dashboard").with("currentUser", user).render();
-	}
-	
-}
+		@Resource
+		public class DashboardController {
+		
+			private final User user;
+			private final Freemarker freemarker;
+		
+			public DashboardController(User user, Freemarker freemarker) {
+				this.user = user;
+				this.freemarker = freemarker;
+			}
+			
+			@Path("/admin/dashboard")
+			@Get
+			public void list() throws IOException, TemplateException {
+				freemarker.use("dashboard").with("currentUser", user).render();
+			}
+			
+		}
 
 # usage for rendering emails
 
