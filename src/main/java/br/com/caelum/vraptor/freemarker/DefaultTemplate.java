@@ -28,7 +28,9 @@ public class DefaultTemplate implements Template {
 	@Override
 	public void render() throws IOException, TemplateException {
 		PrintWriter writer = response.getWriter();
-		template.process(root, writer);
+		Environment processingEnv = template.createProcessingEnvironment(root, writer);
+		processingEnv.setOutputEncoding("UTF-8");
+		processingEnv.process();
 		writer.flush();
 
 		result.nothing();
@@ -45,6 +47,7 @@ public class DefaultTemplate implements Template {
 		StringWriter writer = new StringWriter();
 		Environment processingEnv = template.createProcessingEnvironment(root, writer);
 		processingEnv.setOutputEncoding("UTF-8");
+		processingEnv.process();
 		writer.flush();
 
 		return writer.getBuffer().toString();
