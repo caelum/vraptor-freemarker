@@ -9,6 +9,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.caelum.vraptor.Result;
+import freemarker.core.Environment;
 import freemarker.template.TemplateException;
 
 public class DefaultTemplate implements Template {
@@ -29,7 +30,7 @@ public class DefaultTemplate implements Template {
 		PrintWriter writer = response.getWriter();
 		template.process(root, writer);
 		writer.flush();
-		
+
 		result.nothing();
 	}
 
@@ -42,10 +43,10 @@ public class DefaultTemplate implements Template {
 	@Override
 	public String getContent() throws IOException, TemplateException {
 		StringWriter writer = new StringWriter();
-		template.process(root, writer);
+		Environment processingEnv = template.createProcessingEnvironment(root, writer);
+		processingEnv.setOutputEncoding("UTF-8");
 		writer.flush();
-		
+
 		return writer.getBuffer().toString();
 	}
-
 }

@@ -15,8 +15,9 @@ public class FreemarkerConfiguration {
 		cfg = new Configuration();
 		ClassTemplateLoader loader = new ClassTemplateLoader(getClass(), "/templates/");
 		cfg.setTemplateLoader(loader);
+		cfg.setDefaultEncoding("UTF-8");
 	}
-	
+
 	public Configuration getConfiguration() {
 		return cfg;
 	}
