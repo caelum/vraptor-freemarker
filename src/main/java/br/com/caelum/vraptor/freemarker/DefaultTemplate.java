@@ -6,20 +6,26 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.caelum.vraptor.Result;
+import br.com.caelum.vraptor4.Result;
 import freemarker.core.Environment;
 import freemarker.template.TemplateException;
 
 public class DefaultTemplate implements Template {
 
-	private final freemarker.template.Template template;
+	private freemarker.template.Template template;
 	private final Map<String, Object> root = new HashMap<String, Object>();
-	private final HttpServletResponse response;
-	private final Result result;
+	private HttpServletResponse response;
+	private Result result;
 
-	public DefaultTemplate(freemarker.template.Template template, HttpServletResponse response, Result result) {
+	@Deprecated // CDI eyes only
+	public DefaultTemplate() {}
+
+	@Inject
+	public DefaultTemplate(freemarker.template.Template template,
+			HttpServletResponse response, Result result) {
 		this.template = template;
 		this.response = response;
 		this.result = result;

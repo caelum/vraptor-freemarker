@@ -3,21 +3,26 @@ package br.com.caelum.vraptor.freemarker;
 import java.io.IOException;
 import java.util.Enumeration;
 
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
-import br.com.caelum.vraptor.View;
-import br.com.caelum.vraptor.ioc.Component;
-import br.com.caelum.vraptor.ioc.RequestScoped;
-import br.com.caelum.vraptor.view.ResultException;
+import br.com.caelum.vraptor4.View;
+import br.com.caelum.vraptor4.ioc.RequestScoped;
+import br.com.caelum.vraptor4.view.ResultException;
 import freemarker.template.TemplateException;
 
-@Component
 @RequestScoped
 public class FreemarkerView implements View {
-	private final HttpServletRequest request;
-	private final Freemarker freemarker;
 
-	public FreemarkerView(HttpServletRequest request, Freemarker freemarker) {
+	private HttpServletRequest request;
+	private Freemarker freemarker;
+
+	@Deprecated// CDI eyes only
+	public FreemarkerView() {}
+
+	@Inject
+	public FreemarkerView(HttpServletRequest request,
+			Freemarker freemarker) {
 		this.request = request;
 		this.freemarker = freemarker;
 	}
