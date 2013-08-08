@@ -28,9 +28,15 @@
 	<dependencies>
 		<dependency>
 			<groupId>br.com.caelum</groupId>
-			<artifactId>vraptor</artifactId>
-			<version>3.4.1</version>
+			<artifactId>vraptor4</artifactId>
+			<version>4.0-alpha</version>
 			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.freemarker</groupId>
