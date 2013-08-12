@@ -20,10 +20,6 @@ public class DefaultTemplate implements Template {
 	private HttpServletResponse response;
 	private Result result;
 
-	@Deprecated // CDI eyes only
-	public DefaultTemplate() {}
-
-	@Inject
 	public DefaultTemplate(freemarker.template.Template template,
 			HttpServletResponse response, Result result) {
 		this.template = template;
