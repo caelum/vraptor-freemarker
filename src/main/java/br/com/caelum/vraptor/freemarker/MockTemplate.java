@@ -2,8 +2,11 @@ package br.com.caelum.vraptor.freemarker;
 
 import java.io.IOException;
 
+import javax.enterprise.inject.Alternative;
+
 import freemarker.template.TemplateException;
 
+@Alternative
 public class MockTemplate implements Template {
 
 	@Override

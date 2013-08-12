@@ -2,6 +2,9 @@ package br.com.caelum.vraptor.freemarker;
 
 import java.io.IOException;
 
+import javax.enterprise.inject.Alternative;
+
+@Alternative
 public class MockFreemarker implements Freemarker {
 
 	@Override
