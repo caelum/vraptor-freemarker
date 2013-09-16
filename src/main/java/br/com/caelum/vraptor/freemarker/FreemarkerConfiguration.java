@@ -1,6 +1,7 @@
 package br.com.caelum.vraptor.freemarker;
 
-import br.com.caelum.vraptor4.ioc.ApplicationScoped;
+import javax.enterprise.context.ApplicationScoped;
+
 import freemarker.cache.ClassTemplateLoader;
 import freemarker.template.Configuration;
 
