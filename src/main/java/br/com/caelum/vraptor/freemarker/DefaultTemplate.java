@@ -6,10 +6,10 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.inject.Inject;
+import javax.enterprise.inject.Vetoed;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.caelum.vraptor4.Result;
+import br.com.caelum.vraptor.Result;
 import freemarker.core.Environment;
 import freemarker.template.TemplateException;
 

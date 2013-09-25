@@ -3,12 +3,12 @@ package br.com.caelum.vraptor.freemarker;
 import java.io.IOException;
 import java.util.Enumeration;
 
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
-import br.com.caelum.vraptor4.View;
-import br.com.caelum.vraptor4.ioc.RequestScoped;
-import br.com.caelum.vraptor4.view.ResultException;
+import br.com.caelum.vraptor.View;
+import br.com.caelum.vraptor.view.ResultException;
 import freemarker.template.TemplateException;
 
 @RequestScoped

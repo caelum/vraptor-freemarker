@@ -2,11 +2,11 @@ package br.com.caelum.vraptor.freemarker;
 
 import java.io.IOException;
 
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.caelum.vraptor4.Result;
-import br.com.caelum.vraptor4.ioc.RequestScoped;
+import br.com.caelum.vraptor.Result;
 
 @RequestScoped
 public class FreemarkerEngine implements Freemarker {
