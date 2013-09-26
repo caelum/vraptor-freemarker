@@ -30,7 +30,6 @@
 			<groupId>br.com.caelum</groupId>
 			<artifactId>vraptor</artifactId>
 			<version>4.0.0.beta-SNAPSHOT</version>
-			<scope>compile</scope>
 		</dependency>
 		
 		<dependency>

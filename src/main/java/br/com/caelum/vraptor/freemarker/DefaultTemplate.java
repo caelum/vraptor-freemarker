@@ -6,6 +6,7 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.enterprise.inject.Vetoed;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.caelum.vraptor.Result;
