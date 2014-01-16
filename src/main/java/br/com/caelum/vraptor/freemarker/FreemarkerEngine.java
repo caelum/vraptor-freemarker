@@ -15,7 +15,7 @@ public class FreemarkerEngine implements Freemarker {
 
 	private final HttpServletResponse response;
 	private final Result result;
-	private Configuration cfg;
+	private final Configuration cfg;
 	
 	public FreemarkerEngine(Result result, HttpServletResponse response, FreemarkerConfiguration cfg) {
 		this.result = result;
