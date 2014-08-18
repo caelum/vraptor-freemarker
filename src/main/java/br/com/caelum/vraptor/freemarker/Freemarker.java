@@ -2,6 +2,8 @@ package br.com.caelum.vraptor.freemarker;
 
 import java.io.IOException;
 
+import freemarker.template.Configuration;
+
 /**
  * A freemarker template renderer
  * 
@@ -12,5 +14,6 @@ import java.io.IOException;
 public interface Freemarker {
 
 	Template use(String name) throws IOException;
-
+	
+	Template use(String name, Configuration configuration) throws IOException;
 }
